@@ -14,11 +14,13 @@ const forecast = (latitude,longitude, callback) => {
         }else{
             const data = body.current;
             callback(undefined,{
-                description : data.weather_descriptions[0],
-                temperature : data.temperature,
-                feelslike: data.feelslike,
-                humidity : data.humidity
-            })
+                description: 'It is ' + data.weather_descriptions[0] + ' and temperature currently is ' + data.temperature + 
+                            ' degree. It feels like ' + data.feelslike + ' degree out. Humidity is '+data.humidity +'.'}
+                // description : data.weather_descriptions[0],
+                // temperature : data.temperature,
+                // feelslike: data.feelslike,
+                // humidity : data.humidity
+            )
         }
 
     })
