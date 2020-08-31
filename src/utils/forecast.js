@@ -16,7 +16,8 @@ const forecast = (latitude,longitude, callback) => {
             callback(undefined,{
                 description : data.weather_descriptions[0],
                 temperature : data.temperature,
-                feelslike: data.feelslike
+                feelslike: data.feelslike,
+                humidity : data.humidity
             })
         }
 
@@ -24,15 +25,3 @@ const forecast = (latitude,longitude, callback) => {
 };
 
 module.exports = forecast;
-// const url = 'http://api.weatherstack.com/current?access_key=80f1d1b564de8759925044d219173e53&query=51.517,-0.106';
-
-// request({url : url,json:true },(err,res)=>{
-//     if(err){
-//         console.log('Unable to connect to weather service');
-//     }else if(res.body.error){
-//         console.log('Unable to find location');
-//     }else{
-//         const data = res.body.current;
-//         console.log(data.weather_descriptions[0],'.It is currently',data.temperature,'degree out. It feels like ',data.feelslike,'degree out');
-//     }
-// })
