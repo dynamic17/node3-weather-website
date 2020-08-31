@@ -1,5 +1,3 @@
-console.log("client side javscript file");
-
 const weatherForm = document.querySelector('form');
 const search = weatherForm.querySelector('input');
 const message1 = document.querySelector('#message');
